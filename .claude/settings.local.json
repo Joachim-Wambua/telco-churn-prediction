@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(python -c \"import pandas\")",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import streamlit; print\\('streamlit', streamlit.__version__\\)\")",
+      "Bash(python -c \"import plotly; print\\('plotly', plotly.__version__\\)\")",
+      "Bash(python -c \"import pandas as pd; df=pd.read_csv\\('data/features.csv'\\); print\\('Shape:', df.shape\\); print\\('Columns:', df.columns.tolist\\(\\)\\)\")",
+      "Bash(python app/generate_data.py)",
+      "Bash(streamlit run *)",
+      "Bash(start cmd *)",
+      "PowerShell(Get-Content *)"
     ]
   }
 }
